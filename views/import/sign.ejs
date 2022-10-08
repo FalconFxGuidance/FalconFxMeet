@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Awesome cdn link -->
+        <script src="https://kit.fontawesome.com/1d25c703c8.js" crossorigin="anonymous"></script>
+        
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap css link -->
+        <link rel="stylesheet" href="../node/bootstrap/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+        <!-- Main css link -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <title>Sign Into FalconFx Education</title>
+        <link rel="icon" type="image/x-icon" href="../falcon.ico">
+    </head>
+    <body style="padding-top: 8em;">
+        
+
+
+
+
+        <!-- ----------#####---------- Navigation menu (Section) starts here ----------#####---------- -->
+                
+            <nav class="project-nav-menu fixed-top container-fluid" style="background-color: #f1f6fc;">
+                <div class="nav container fixed-top">
+                    <input type="checkbox" id="nav-check">
+                    <div class="nav-header">
+                        <div class="nav-title" style="cursor: pointer;" onclick="document.location.href='/'">
+                            <img src="../image/falcon.png" style="width: 50px;height: 40px;margin-right: 7px;">FalconFx Education
+                        </div>
+                    </div>
+                    <div class="nav-btn">
+                        <label for="nav-check">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+            
+                    <div class="nav-links">
+                        <ul>
+                            <li class="nav-li-shift"><a class="head-anc" href="/">Home</a></li>
+                            <a href="/plan" class="get-started-btn nav-btn-shift">Education Pricing</a>
+                            <p class="res"></p><a href="/binance/authorization" class="get-started-btn nav-btn-shift">Binance Connect</a>
+                            <p class="res"></p><a href="/login" class="sign-btn nav-btn-shift">Sign In</a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        <!-- Closed ----------#####---------- -->
+
+
+
+
+
+        <!-- Chatbox -->
+        <a href="https://t.me/markhutchinson_official" target="_blank"><div class="chatbox"><img src="../image/telegram.png" class="img-fluid" alt="" srcset=""></div></a>
+
+        
+
+
+        <div class="container-fluid general-head-section">
+            <div class="container">
+                <div class="row back-shadow d-flex justify-content-center">
+    
+                    <!-- Welcome container -->
+                    <div class="col-sm-12 col-md-6 col-lg-6 sign-pad">
+                        <div class="welcome-container signin-back">
+                            <p class="section-large-txt" style="color: #fff;">Welcome Friend!</p>
+                            <p class="normal-txt white-font">
+                                Please log into your dashboard with your information.
+                            </p>
+                            <p class="normal-txt white-font">
+                                Contact us on <a href="https://t.me/markhutchinson_official" target="_blank" class="sign-link">Telegram</a> or <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHvbGcNltKkjCZbmjZDbgrbknvLjhtTLsDzgRqKvwnntckddlpVcbvntCCXmldTBgmXbDGV" target="_blank" class="sign-link">falconFXTrade8@gmail.com</a> for more informations.
+                            </p>
+                            <p class="normal-txt white-font">
+                                Don't have an Account? Connect to Binance to create one.
+                            </p>
+                            <a href="/binance/authorization" class="signin-btn">Binance Connect</a>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <!-- Sign container -->
+                    <div class="col-sm-12 col-md-6 col-lg-4 sign-pad">
+                        <div class="sign-container">
+                            <p class="section-large-txt">Sign Into FalconFX Education</p>
+                            <p class="sign-txt normal-txt light-font">To gain access to the dashboard, please enter your information.</p>
+                            
+                            <!-- Error messages -->
+                            <p id="err-msg">Your credentails are incorrect!</p>
+                            <!-- Input form section -->
+                            <form  name="login">
+                                <div class="form-group">
+                                    <div class="input-icon-wrap"><i class="fa img-fluid fa-solid fa-envelope"></i></div>
+                                    <input type="email" id="email" name="username" class="form-control form-input" placeholder="Enter Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-icon-wrap input-wrap-shift"><i class="fa img-fluid fa-solid fa-lock"></i></div>
+                                    <div style="display: flex;position: relative;flex-direction: row;">
+                                        <input type="password" id="pass" name="password" class="form-control form-input" placeholder="Enter Password" required>
+                                        <span id="visiblity-toggle" class="material-icons-outlined" style="background: #335aff;position: absolute;color: rgb(228, 228, 228);right: 0px;padding:10px;margin-top: 15px;border-radius: 0px 5px 5px 0px;">visibility</span>
+                                    </div>
+                                </div>
+                                <!-- <div class="forgot-wrap"><a href="#" class="forgot-link">Forgot Password?</a></div> -->
+                                <button type="submit" value="Login!" onClick="Login()" class="btn btn-wrap1">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+                <div class="col-12 normal-txt" style="margin: 5em 0 3em 0;text-align: center;">© FalconFX Education 2022. All rights reserved.</div>
+    
+            </div>
+        </div>
+
+
+
+
+
+    </body>
+    
+    <!-- Option 1: Bootstrap Bundle with JQuery -->
+    <script src="../script/jquery.js"></script>
+	<script src="../node/bootstrap/dist/js/bootstrap.js"></script>
+
+
+    <script>
+        const pass = document.querySelector('#pass')
+        const btn = document.querySelector('#visiblity-toggle')
+
+        btn.addEventListener('click', () => {
+            if (pass.type === "text") {
+                pass.type = "password";
+                btn.innerHTML = "visibility";
+            } else {
+                pass.type = "text";
+                btn.innerHTML = "visibility_off";
+
+            }
+        })
+    </script>
+
+
+    <script LANGUAGE="JavaScript">
+        function display() {
+            document.getElementById("err-msg").style.display="block";
+        }
+        function Login(){
+            var done=0;
+            var username=document.login.username.value;
+            username=username.toLowerCase();
+            var password=document.login.password.value;
+            password=password.toLowerCase();
+            if (username=="member1" && password=="password1") { window.location="/binance/success"; done=1; }
+            else if (username=="member2" && password=="password2") { window.location="/binance/success"; done=1; }
+            else if (username=="member3" && password=="password3") { window.location="/binance/success"; done=1; }
+            else if (done==0) { display(); }
+            else { display(); }
+        }
+    </script>
+    
+    
+
+
+</html>
